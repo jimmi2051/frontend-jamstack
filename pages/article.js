@@ -9,10 +9,7 @@ const Article = () => {
   return (
     <Query query={ARTICLE_QUERY} id={router.query.id}>
       {({ data: { article } }) => {
-        const imageUrl =
-          process.env.NODE_ENV !== "development"
-            ? article.image.url
-            : process.env.API_URL + article.image.url;
+        const imageUrl = process.env.API_URL + article.image.url;
         return (
           <div>
             <div
