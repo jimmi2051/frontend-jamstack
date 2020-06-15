@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const Card = ({ article }) => {
+  console.log("DEBUG NODE ENV ==>", process.env.NODE_ENV);
   const imageUrl =
     process.env.NODE_ENV !== "development"
       ? article.image.url
